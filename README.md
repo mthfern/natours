@@ -1,2 +1,2 @@
 # natours
-Web application about nature tour shopping, implemented with Node.js/Express/MongoDb
+Tour selling web application, implemented to apply concepts of Node.js, Express, MongoDb and more.
