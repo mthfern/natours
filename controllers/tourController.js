@@ -2,7 +2,16 @@ const Tour = require('../models/tourModel');
 
 exports.getAllTours = async (req, res) => {
   try {
-    const tours = await Tour.find();
+    const queryObj = { ...req.query };
+    const schemaObj = Tour.schema.obj;
+
+    Object.entries(queryObj).forEach((prop) => {
+      if (!Object.prototype.hasOwnProperty.call(schemaObj, prop[0])) {
+        delete queryObj(prop[0]);
+      }
+    });
+
+    const tours = await Tour.find(queryObj);
     res.status(200).json({
       status: 'success',
       results: tours.length,
