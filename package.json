@@ -4,7 +4,9 @@
   "main": "app.js",
   "scripts": {
     "start": "NODE_ENV=development nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js"
+    "start:prod": "NODE_ENV=production nodemon server.js",
+    "cleandb:tours": "node ./dev-data/scripts/dbdata.js --clean-tours",
+    "importdb:tours": "node ./dev-data/scripts/dbdata.js --import-tours"
   },
   "author": "Matheus Fernandes",
   "license": "ISC",
