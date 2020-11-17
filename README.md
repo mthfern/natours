@@ -1,2 +1,3 @@
 # natours
-Tour selling web application, implemented to apply concepts of Node.js, Express, MongoDb and more.
+
+Web application, a tour store, implemented with Node.js/Express/MongoDb
