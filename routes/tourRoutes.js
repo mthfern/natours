@@ -9,6 +9,15 @@ tourRouter
   .route('/')
   .get(tourController.getAllTours)
   .post(tourController.createTour);
+
+tourRouter
+  .route('/top-5-tours')
+  .get(tourController.aliasTopTours, tourController.getAllTours);
+
+tourRouter.route('/stats').get(tourController.toursStats);
+
+tourRouter.route('/monthly-plan/:year').get(tourController.monthlyPlan);
+
 tourRouter
   .route('/:id')
   .get(tourController.getTour)
